@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS public.usuarios
+(
+    id_usuario integer NOT NULL DEFAULT nextval('"Usuarios_id_usuario_seq"'::regclass),
+    id_persona integer,
+    nombre_usuario character varying(50) COLLATE pg_catalog."default",
+    nivel character varying(50) COLLATE pg_catalog."default",
+    estado character varying(10) COLLATE pg_catalog."default",
+    "Contraseña" character varying(20) COLLATE pg_catalog."default",
+    CONSTRAINT usuarios_pkey PRIMARY KEY (id_usuario),
+    CONSTRAINT id_usuario UNIQUE (id_usuario)
+        INCLUDE(id_usuario),
+    CONSTRAINT id_persona FOREIGN KEY (id_persona)
+        REFERENCES public.personas (id_persona) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.usuarios
+    OWNER to postgres;
