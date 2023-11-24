@@ -36,5 +36,10 @@ namespace Servicios.ContactService
                 throw new Exception("La descripción no debe estar nulo");
             }
         }
+
+        public void eliminarPersona(int id_Persona)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

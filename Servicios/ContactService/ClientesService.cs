@@ -37,5 +37,9 @@ namespace Servicios.ContactService
             }
         }
 
+        public void eliminarCliente(int id_Cliente)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

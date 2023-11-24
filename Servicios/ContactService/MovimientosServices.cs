@@ -36,5 +36,10 @@ namespace Servicios.ContactService
                 throw new Exception("La descripción no debe estar nulo");
             }
         }
+
+        public void eliminarMovimiento(int id_Movimiento)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

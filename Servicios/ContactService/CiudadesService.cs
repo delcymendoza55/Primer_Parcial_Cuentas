@@ -39,5 +39,9 @@ namespace Servicios.ContactService
             }
         }
 
+        public void eliminarCiudad(int id_Ciudad)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
